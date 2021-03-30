@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.">
+    
+    <title>CV Website</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <script defer src="https://kit.fontawesome.com/11c7c43860.js" crossorigin="anonymous"></script>
+
+    <!-- Don't laugh at my css :'(  😭	-->
+
+    <style>
+        .sticky {
+            position: static;
+            top:0px;
+            /*z-index: 100;*/
+        }
+
+        .floatbtn {
+            display: inline-block;
+            position: fixed;
+            bottom: 1em;
+            right: 1em;
+            opacity: 1;
+            z-index: 100;
+        }
+
+        .menu-icon:hover{
+            color:#209cee;
+        }
+
+
+        /*.menu{
+            position: fixed;
+            top: 1em;
+        }*/
+
+        p {
+            text-align: justify;
+        }
+
+
+        @media (min-width: 769px){
+               .fullheight{height: 96vh;}
+               /*.menu{position: static;}*/
+           }
+
+           @media(max-height: 400px ){
+               .sticky{overflow-y: scroll;}
+               /*.fullheight{height: 100vh;}*/
+           }
+
+           @media (min-width:769px){
+               .floatbtn{display: none;}
+               .sticky{position: sticky;}
+           }
+
+    </style>
+
+</head>
+<body id="main">
+    <div class="columns">
+        <div class="column is-4-tablet is-3-desktop px-5 has-background-info-light sidebar">
+            <div class="section fullheight sticky"> <!-- fullheight sticky -->
+                
+                <h1 class="title is-2-tablet is-size-2-desktop pt-5"><a class="has-text-dark wrap" href="index.html">Jason Mungal</a></h1>
+                    
+                <p class="subtitle pt-5 pb-1 has-text-left">Programmer and technology enthusiast</p>
+
+                <aside class="menu py-6">
+                    <p class="menu-label"></p>
+                    <ul class="menu-list">
+                        <li><a id="aboutmenu" class="has-text-weight-bold nav-links is-active" href="#aboutme">About me</a></li>
+                        <li><a id="projectsmenu" class="has-text-weight-bold nav-links" href="#projects">Projects</a></li>
+                    </ul>
+                </aside>
+                
+                
+                <div class="has-text-centered" id="icon_box">
+                    <a class="button is-light mx-2" href="https://github.com/j-l-m" title="GitHub">
+                        <span class="icon menu-icon">
+                            <i class="fab fa-github fa-2x"></i>
+                        </span>
+                    </a>
+                    <a class="button is-light mx-2" href="mailto:jlm9126@gmail.com" title="E-mail">
+                        <span class="icon menu-icon">
+                            <i class="fas fa-envelope fa-2x"></i>
+                        </span>
+                    </a>
+                </div>
+
+                <!--<div class="section has-text-centered has-text-weight-light"><span>&#169 2021</span></div>-->				
+                <a class="button floatbtn is-link is-rounded" href="#top">Back to top</a>
+            </div>
+
+
+        </div>
+        <div class="column is-8-tablet is-9-desktop">
+            <section class="section"><a class="anchors" id="about" name="aboutme"></a>
+                <h2 class="title is-2-tablet is-size-2-desktop">Hi&nbsp!</h2>
+                <p> I'm a programmer with a MSc. in Computer Science from The University of the West Indies, St. Augustine. Currently my interests are in machine learning and scientific computing. For my final project I used convolutional neural networks to classify images of local hot peppers. An interpretability technique called Grad-CAM was used to examine how the model made predictions.</p><br>
+
+                <p>Previously I worked as a programmer at a payroll software company. There, I worked with a large database and did backend programming on a daily basis for the company's web application. In the last year of my masters I worked as a full-time teaching assistant at the University of the West Indies, St. Augustine. At UWI I tutored introductory to advanced programming classes and conducted programming labs with undergraduate students.</p><br>
+
+                <p>My dream is to work on software that can improve people's lives. Projects where the end goal is not profit or a business objective, but to empower people to do things they could not do before.</p>
+            </section>
+            
+
+            <section class="section pb-1"><a id="project" name="projects" class="anchors"></a>
+                <h2 class="title is-2-tablet is-size-2-desktop">Projects and Code samples</h2>
+                <p class="subtitle py-5"> Below is a short listing of some of the things I've worked on in my own time...</p>
+            
+                <div class="section">
+                    <h4 class="title is-size-4">Grad-CAM Demo&nbsp<i style="color:#ffc933" class="fas fa-star"></i></h4>
+                    <p> An extract from my project showing an implementation of a CNN interpretability technique known as Grad-CAM.<br>	
+                    <a href="https://github.com/j-l-m/Grad-CAM_demo/blob/master/gradcam_demo.ipynb">Grad-CAM Demo</a>
+                    </p>
+                </div>
+
+                <div class="section">
+                    <h4 class="title is-size-4">Transfer Learning using VGG16 in Keras</h4>
+                    <p> An extract from my project showing how the transfer learning technique can be used with the VGG16 model with weights after being pre-trained on ImageNet.<br>	
+                    <a href="https://github.com/j-l-m/Keras_using_pretrained_VGG16/blob/master/vgg16_test.ipynb">Transfer Learning with VGG16 in Keras</a>
+                    </p>
+                </div>
+
+                <div class="section">
+                    <h4 class="title is-size-4">Elliptic Curve Cryptography</h4>
+                    <p> An elementary example of elliptic curve cryptography (ECC) in Python. ECC is the foundation of block chain technology.<br>	
+                    <a href="https://github.com/j-l-m/ec_curve/blob/master/ecc.ipynb">Grad-CAM Demo</a>
+                    </p>
+                </div>
+
+                <div class="section">
+                    <h4 class="title is-size-4">K-Means Clustering on Amazon Review Data</h4>
+                    <p> An extract from a project showing a use of K-Means clustering to group reviewers based on average product rating given. This sample use the scikit-learn libray in Python:<br>	
+                    <a href="https://github.com/j-l-m/ec_curve/blob/master/ecc.ipynb">K-Means Clustering sample</a>
+                    </p>
+                </div>
+
+                <div class="section">
+                    <h4 class="title is-size-4">GME Stock Price Tracker&nbsp<i style="color:#ffc933" class="fas fa-star"></i></h4>
+                    <p>A small project I did for fun when GameStop stock (GME) was going to the MOON! Uses a scheduled AWS Lambda to consume a stock API and store the result in a DynamoDB table. An AWS API endpoint is used to access an AWS Lambda function to return an HTML page to the user. The content of the page determined by the price change in GME stock.<br>	
+                    <a href="https://y4uxu1u0ff.execute-api.us-east-1.amazonaws.com/test/gme">GME Price Tracker</a>
+                    </p>
+                </div>
+
+                <div class="section">
+                    <h4 class="title is-size-4">A Radial Gen-6 Pokemon Type Chart</h4>
+                    <p>A small project I did for fun. Using a data visualization library known as HighCharts.js to create a radial pokemon type chart.<br>	
+                    <a href="https://github.com/j-l-m/gen.6-radial-type-chart">Radial Type Chart</a>
+                    </p>
+                </div>
+
+            </section> <!--end projects section-->
+
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        (function (){
+
+            function isScrolledIntoView(el){
+                //console.log(el);
+                let rect = el.getBoundingClientRect();
+                let elemTop = rect.top;
+                let elemBottom = rect.bottom;
+
+                let isVisible = (elemTop >=0) && (elemBottom <= 200); //window.innerHeight
+                return isVisible;
+            }
+
+            let anchors = document.getElementsByClassName("anchors")
+            //console.log(anchors);
+
+
+            let menuItems = [];
+            menuItems.push(document.getElementById("aboutmenu"));
+            menuItems.push(document.getElementById("projectsmenu"));
+
+            window.onscroll = function(ev){
+                //console.log("working");
+                for (let i =0; i<anchors.length; i++){
+                    x = anchors[i];
+                    if (isScrolledIntoView(x)){
+                        //console.log(x);
+                        for(j = 0; j<menuItems.length; j++)
+                            menuItems[j].classList.remove('is-active');
+                        menuItems[i].classList.add('is-active');
+                        return;
+                    }
+                }
+                return;
+            }
+
+            let menuList = document.getElementsByClassName("nav-links");
+            //console.log(menuList);
+            
+            for (let i = 0; i<menuList.length; i++){
+                menuList[i].addEventListener('click', (e) =>{
+                    //console.log(e);
+                    
+                    for(let j =0; j<menuList.length; j++){
+                        menuList[j].classList.remove("is-active");
+                        e.target.classList.add("is-active");
+                    }
+                
+                });
+
+            }
+            
+
+        })();
+    </script>
+</body>
+</html>
