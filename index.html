@@ -112,6 +112,7 @@
                     <p class="menu-label"></p>
                     <ul class="menu-list">
                         <li><a id="aboutmenu" class="has-text-weight-bold nav-links is-active" href="#aboutme">About me</a></li>
+                        <li><a id="publicationsmenu" class="has-text-weight-bold nav-links" href="#publications">Publications</a></li>
                         <li><a id="projectsmenu" class="has-text-weight-bold nav-links" href="#projects">Projects</a></li>
                     </ul>
                 </aside>
@@ -139,13 +140,29 @@
         <div class="column is-8-tablet is-9-desktop">
             <section class="section"><a class="anchors" id="about" name="aboutme"></a>
                 <h2 class="title is-2-tablet is-size-2-desktop">Hi&nbsp!</h2>
-                <p> I'm a software developer with an interest in machine learning. Currently, I work for a media montioring company where I help develop web and media processing applications. Our systems monitor over 200 radio and TV stations across the Caribbean. </p><br>
+                <p> I'm a software developer with an interest in machine learning. Currently, I work for a media monitoring company where I help develop web and media processing applications. Our systems monitor over 200 radio and TV stations across the Caribbean. </p><br>
                 
                 <p> I also hold an MSc. in Computer Science from The University of the West Indies, St. Augustine. For my final project I used convolutional neural networks to classify images of local hot peppers. A well-known interpretability technique called Grad-CAM was used to examine how the model made predictions.</p><br>
 
                 <p>Previously I worked as a programmer at a payroll software company. There, I mainly did backend programming for the company's web application. I have also worked as a full-time teaching assistant at the University of the West Indies, St. Augustine. At UWI I tutored introductory to advanced programming classes and conducted programming labs with undergraduate students.</p><br>
 
                 <p>My dream is to work on software that can improve people's lives. Projects where the end goal is not profit or a business objective, but to empower people to do things they could not do before.</p>
+            </section>
+
+
+            <section class="section"><a class="anchors" id="publications" name="publications"></a>
+                <h2 class="title is-2-tablet is-size-2-desktop">Publications</h2>
+                    <div class="section">
+                        <p> <b><em>"An Annotated Caribbean Hot Pepper Image Dataset"</em></b> <br>
+                            Arai, K. (eds) Proceedings of the Future Technologies Conference (FTC) 2022, Volume 1. FTC 2022 2022. Lecture Notes in Networks and Systems, vol 559. <br>
+                            <!-- <a  class="redirect" href="https://doi.org/10.1007/978-3-031-18461-1_49">Link</a> -->
+                        </p>
+                        <br>
+                        <p>
+                            This paper involved collecting images of local hot pepper fruit with annotations of their physical features. It also showed a simple image classification task using CNNs and the created dataset.
+                            This dataset can be used for further work in developing Deep Learning applications for the regional hot pepper industry. It additionally serves as the starting ground for a Caribbean based hot-pepper ontology.
+                        </p>
+                    </div>
             </section>
             
 
@@ -232,6 +249,7 @@
 
             let menuItems = [];
             menuItems.push(document.getElementById("aboutmenu"));
+            menuItems.push(document.getElementById("publicationsmenu"));
             menuItems.push(document.getElementById("projectsmenu"));
 
             window.onscroll = function(ev){
